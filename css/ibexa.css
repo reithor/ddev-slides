@@ -1,0 +1,169 @@
+/* Import base theme that we extend here (sto avoid upgrade issues by forking + adapting it like was done before) */
+@import url("../../css/theme/white.css");
+
+/**
+  * Ibexa theming
+  * Follows: https://company-175303.frontify.com/d/MVKknYuZZLbP/guidelines#/basics/typography
+ */
+
+/* Ibexa fonts in bulk */
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans|Work+Sans");
+
+.reveal {
+    /* Change font and reduce size from 42px for space*/
+    font-family: "Noto Sans", "Calibri", sans-serif;
+    font-size: 39px;
+}
+
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4,
+.reveal h5,
+.reveal h6 {
+    font-family: "Work Sans", sans-serif;
+    text-transform: none;
+}
+
+/* Overloading theme  */
+.reveal a { color: #ff4713; }
+.reveal .controls button { color: #333333; }
+
+.reveal h1 { font-size: 1.42em; }
+.reveal h2 { font-size: 1.21em; }
+.reveal h3 { font-size: 1.1em; }
+.reveal h4 { font-size: 1em; }
+
+.slides section {
+    text-align: left;
+}
+
+.slides section > :not(pre) { padding-left: 0.6em; } /* adds some spacing on all root tags */
+.slides section > center { padding-right: 0.6em; }
+
+.reveal section img {
+    border: 0;
+}
+
+.reveal section > ul, .reveal section > ol {
+    margin-bottom: 20px;
+    padding-left: 1em;
+}
+
+.reveal ul ul li {
+    font-size: 90%;
+}
+
+
+/* Logo and styling on header (if h1 / h2 / h3 is present as first child on slide)*/
+.slides section > h1:first-child, .slides section > h2:first-child, .slides section > h3:first-child  {
+    text-align: center;
+    color: white;
+    margin-top: -20px;
+    padding: 0.4em;
+    background: #131c26 url(../images/ibexa_logo.svg) no-repeat center left 0.95em/170px;
+}
+.slides section h2:first-child { background-size: 125px; padding: 0.25em; }
+.slides section h3:first-child { background-size: 105px; padding: 0.2em; }
+
+
+/* Styling for exercise slides in order to make it more clear when we have a exercise */
+.slides section.exercise h1:first-child, .slides section.exercise h2:first-child, .slides section.exercise h3:first-child {
+    background: linear-gradient(270deg,#db0032,#ff4713) no-repeat center left 100%/100%;
+    padding: 0.1em;
+}
+
+/* Quote styling: https://css-tricks.com/snippets/css/simple-and-nice-blockquote-styling/ */
+.reveal blockquote {
+    width: 80%;
+    background: #f9f9f9;
+    border-left: 10px solid #ccc;
+    padding: 0.5em 10px;
+    quotes: "\201C""\201D""\2018""\2019";
+}
+/*
+ skip for now as we use blockquote for list of links and code in some cases.
+ .reveal blockquote:before {
+    color: #ccc;
+    content: open-quote;
+    font-size: 2em;
+    line-height: 0.1em;
+    margin-right: 0.25em;
+    vertical-align: -0.3em;
+}*/
+
+.reveal blockquote > p {
+    display: inline;
+}
+
+/* Code styling with additional notification types (tip, note, warning, error) */
+.reveal pre code.hljs {
+	max-height: 660px;
+	white-space: pre-wrap;
+    /* Using Ibexa black for consistency and better contrast */
+    background-color: #131C26;
+}
+
+.reveal pre code.language-action,
+.reveal pre code.language-warning,
+.reveal pre code.language-tip,
+.reveal pre code.language-hint,
+.reveal pre code.language-goal,
+.reveal pre code.language-error {
+	border-left: 0.5em solid darkorange;
+    padding: 0.8em;
+    white-space: pre-wrap;
+}
+.reveal pre code.language-action { border-color: lightskyblue; }
+.reveal pre code.language-hint { border-color: dodgerblue; }
+.reveal pre code.language-error { border-color: orangered; }
+.reveal pre code.language-tip { border-color: forestgreen; }
+.reveal pre code.language-goal { border-color: yellowgreen; }
+
+
+/* Additional classes to scale and center images */
+.reveal .scale90 { width:90%; }
+.reveal .scale80 { width:80%; }
+.reveal .scale70 { width:70%; }
+.reveal .scale60 { width:60%; }
+.reveal .scale50 { width:50%; }
+.reveal .scale40 { width:40%; }
+.reveal .scale30 { width:30%; }
+
+.reveal .center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* Ibexa color transition on bottom */
+body::before {
+    background-image: linear-gradient(270deg,#db0032,#ff4713);
+    content: "";
+    display: block;
+    height: 5px;
+    position: absolute;
+    bottom:0;
+    width: 100%;
+}
+
+/* Ibexa code block */
+.reveal code {
+    font-family: courier new,courier, monospace;
+}
+
+/* Ibexa Print Settings */
+
+@media print {
+    /* remove maxheight for code blocks */
+    .reveal pre code.hljs {
+        max-height: initial;
+        height: 100% !important;
+    }
+
+     /* decrease font-size */
+    .reveal pre {
+        font-size: 0.40em;
+    }
+}
