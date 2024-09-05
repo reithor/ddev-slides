@@ -1,4 +1,4 @@
-# Ibexa Support Workshop 09/2024
+# Ibexa PX Workshop 09/2024
 
 
 - About DDEV
@@ -12,9 +12,9 @@
     - DDEV toolkit https://github.com/reithor/ibexa-ddev-toolkit
     - PR from Maciej Kobus - interactive DDEV setup (https://github.com/ibexa/website-skeleton/pull/14)
 - DDEV and ... :
-    - Personalization
     - Varnish
     - Fastly
+    - Personalization
     - Blackfire
 
 
@@ -188,22 +188,6 @@ ddev start
 
 ---
 
-### DDEV and ... personalization
-
-https://github.com/reithor/ibexa-ddev-toolkit/tree/personalization
-
-NOTE:
-Ngrock:
-https://dashboard.ngrok.com/
-https://dashboard.ngrok.com/get-started/your-authtoken
-
-https://doc.ibexa.co/en/latest/personalization/api_reference/tracking_api/
-
-
-
-
---
-
 ### DDEV and ... Varnish
 
 ```
@@ -277,4 +261,52 @@ https://tre-dxp.global.ssl.fastly.net -> shows your app via fastly (actually 'my
 
 --
 
+### DDEV and ... personalization
+
+
+Repo:
+https://github.com/reithor/ibexa-ddev-toolkit/tree/personalization
+
+
+https://dashboard.ngrok.com/
+https://dashboard.ngrok.com/get-started/your-authtoken
+
+
+
+NOTE:
+Ngrock:
+https://dashboard.ngrok.com/
+https://dashboard.ngrok.com/get-started/your-authtoken
+
+https://doc.ibexa.co/en/latest/personalization/api_reference/tracking_api/
+
+
+
+
+--
+
 ### DDEV and ... Blackfire
+
+
+Login to github using support@ibexa.co:
+
+https://github.com
+
+Login to Blackfire using github auth:
+
+https://blackfire.io/login
+
+Check Auth params:
+
+https://app.blackfire.io/envs/50d883ce-f002-441f-a690-0402cc8c7031/credentials
+
+
+
+Setup DDEV for Blackfire:
+
+https://docs.blackfire.io/integrations/paas/ddev
+
+
+NOTE:
+
+https://ibexa.atlassian.net/wiki/spaces/ENG/pages/5701714/Installation+via+Flex#Manual-installation-procedure-(for-development-branches)
