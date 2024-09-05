@@ -267,10 +267,17 @@ https://tre-dxp.global.ssl.fastly.net -> shows your app via fastly (actually 'my
 Repo:
 https://github.com/reithor/ibexa-ddev-toolkit/tree/personalization
 
+Create Account:
 
-https://dashboard.ngrok.com/
-https://dashboard.ngrok.com/get-started/your-authtoken
+https://doc.ibexa.co/projects/userguide/en/master/personalization/enable_personalization/#create-account
 
+
+Set Credentials:
+
+https://doc.ibexa.co/en/latest/personalization/enable_personalization/#get-authentication-parameters
+
+Set up tracking:
+https://doc.ibexa.co/en/latest/personalization/enable_personalization/#set-up-item-type-tracking
 
 
 NOTE:
