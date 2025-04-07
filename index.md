@@ -11,10 +11,11 @@
 - Make Life easier - DDEV tools 
     - DDEV toolkit https://github.com/reithor/ibexa-ddev-toolkit
     - PR from Maciej Kobus - interactive DDEV setup (https://github.com/ibexa/website-skeleton/pull/14)
+    - Interactive DDEV setup as ddev Add-on: https://github.com/reithor/ddev-ibexa-installer/
 - DDEV and ... :
     - Varnish
     - Fastly
-    - Personalization
+    <!-- - Personalization -->
     - Blackfire
 
 
@@ -138,7 +139,7 @@ Example:
 
 ---
 
-### Make Life Easier - DDEV toolkit 
+### Make Life Easier (I) - DDEV toolkit 
 
 DDEV toolkit https://github.com/reithor/ibexa-ddev-toolkit
 
@@ -171,7 +172,7 @@ ln -s ibexa-ddev-toolkit/ddev-dxp-installer.sh  ibexa_installer
 
 --
 
-### Make Life Easier - interactive DDEV setup
+### Make Life Easier (II) - interactive DDEV setup
 
 Interactive DDEV setup: https://github.com/ibexa/website-skeleton/pull/14
 (Hugely improved UX - by using https://github.com/charmbracelet/gum )
@@ -182,6 +183,29 @@ Interactive DDEV setup: https://github.com/ibexa/website-skeleton/pull/14
 git clone -b ddev git@github.com:ibexa/website-skeleton.git ibexa-dxp
 cd ibexa-dxp
 ddev start
+
+#
+```
+
+--
+
+### Make Life Easier (III) - interactive DDEV setup
+
+Interactive DDEV setup as DDEV Add-On : https://github.com/reithor/ddev-ibexa-installer/
+
+
+```
+# clone repo locally (or download from https://github.com/reithor/ddev-ibexa-installer/archive/refs/heads/main.zip )
+git clone git@github.com:reithor/ddev-ibexa-installer.git ~/ddev-ibexa-installer
+
+
+# new project 
+mkdir installer_demo # create dir in directory where you usually store Webprojects
+cd installer_demo
+~/ddev-ibexa-installer/bin/create_project
+
+# Existing local project checkouts can be initialized.
+~/ddev-ibexa-installer/bin/init_project
 
 #
 ```
@@ -229,7 +253,6 @@ You need:
   FASTLY_KEY:
   ==> https://manage.fastly.com/account/tokens
 - Run  `ddev composer require ibexa/fastly-forwarded-host`<br>
-   --> ask Vidar why this is needed !
 - A modified `ez_main.vcl` to skip ngrock warning<br>
   see: https://stackoverflow.com/questions/73017353/how-to-bypass-ngrok-browser-warning
 
@@ -240,8 +263,8 @@ You need:
 Change .env.local 
 ```
 # .env.local
-FASTLY_SERVICE_ID=C5RrCFkVlRf9oTw5JR0I26
-FASTLY_KEY=gYkZ_qS1FX7sLoKkPo4Z4R8cikiXOi-6
+FASTLY_SERVICE_ID=...
+FASTLY_KEY=...
 
 HTTPCACHE_PURGE_SERVER=https://api.fastly.com
 HTTPCACHE_PURGE_TYPE=fastly
@@ -261,9 +284,10 @@ https://tre-dxp.global.ssl.fastly.net -> shows your app via fastly (actually 'my
 
 --
 
-### DDEV and ... personalization
 
+<!-- ### DDEV and ... personalization -->
 
+<!-- 
 Repo:
 https://github.com/reithor/ibexa-ddev-toolkit/tree/personalization
 
@@ -287,10 +311,10 @@ https://dashboard.ngrok.com/get-started/your-authtoken
 
 https://doc.ibexa.co/en/latest/personalization/api_reference/tracking_api/
 
+-->
 
+<!-- -- -->
 
-
---
 
 ### DDEV and ... Blackfire
 
