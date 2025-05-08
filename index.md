@@ -195,13 +195,13 @@ Interactive DDEV setup as DDEV Add-On : https://github.com/reithor/ddev-ibexa-in
 
 
 ```
-# clone repo locally (or download from https://github.com/reithor/ddev-ibexa-installer/archive/refs/heads/main.zip )
+# clone repo locally
+# or download from https://github.com/reithor/ddev-ibexa-installer/archive/refs/heads/main.zip
 git clone git@github.com:reithor/ddev-ibexa-installer.git ~/ddev-ibexa-installer
 
 
 # new project 
-mkdir installer_demo # create dir in directory where you usually store Webprojects
-cd installer_demo
+mkdir installer_demo && cd installer_demo
 ~/ddev-ibexa-installer/bin/create_project
 
 # Existing local project checkouts can be initialized.
