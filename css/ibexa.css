@@ -25,6 +25,25 @@
     text-transform: none;
 }
 
+.reveal h2:not(:first-child),
+.reveal h3:not(:first-child),
+.reveal h4,
+.reveal h5,
+.reveal h6,
+.reveal p {
+
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.reveal p {
+    margin-top: 50px;
+}
+
+.reveal ul {
+    margin-left: 70px;
+}
+
 /* Overloading theme  */
 .reveal a { color: #ff4713; }
 .reveal .controls button { color: #333333; }
